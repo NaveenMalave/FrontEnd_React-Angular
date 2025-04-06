@@ -1,0 +1,20 @@
+<p>
+    Enter number x:
+    <input type="number" [(ngModel)]="x"><!--of [value]="x"-->
+</p>
+<p>
+    Enter number Y:
+    <input type="number" [(ngModel)]="y"><!--or---value = "{{x}}"-->
+</p>
+<button class="btn btn-primary" (click)="addNumbers()">Add numbers</button>
+<h3>Result:{{result}}</h3>
+<!-- <p *ngIf="age>=18">adult</p> -->
+ <table border="1">
+    <tr>
+        <td>AAA</td>
+        <td> bbb</td>
+    </tr>
+    <tr>
+        <td [attr.colspan="colSize">ccc</td>
+    </tr>
+ </table>

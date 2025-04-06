@@ -1,0 +1,16 @@
+<h3>ng-for-of Demo</h3>
+<hr>
+<ul>
+    <!-- <li *ngFor="let name of names;index as i">{{i}}->{{name}}</li>
+     <li *ngFor="let p of people;index as i" [(ngClass)]= "getCssClass(p.age)">
+         <img [src]="{{p.picture}}" width="50" height="50"/>
+    {{i+1}}.{{p.name}} - {{p.age}} is from {{p.city}} 
+    <button class="btn btn-danger"(click)="deletePerson(i)">x</button>  
+    </li> -->
+    <!-- <li *ngFor="let name of names;index as i">{{i}} -> {{name}}</li> -->
+    <li *ngFor="let p of people;index as i">
+        <img src="{{p.picture}}" width="50" height="50">
+        {{i+1}}.{{p.name}} - {{p.age}} is from {{p.city}}
+        <button class="btn btn-primary" (click)="deletePerson(i)">x</button>
+    </li>
+</ul>
