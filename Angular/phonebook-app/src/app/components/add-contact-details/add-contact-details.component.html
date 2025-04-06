@@ -1,0 +1,178 @@
+<!-- <p>add-contact-details works!</p> -->
+{{contact|json}}
+<form #f1="ngForm" *ngIf="contact">
+    <div class="row form-group">
+        <div class="col">
+            <label for="firstname">FirstName</label>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col">
+            <input #firstname="ngModel" type="text" class="form-control" id="firstname" name="firstname"
+                [(ngModel)]="contact.firstname" required minlength="3" maxlength="10">
+        </div>
+
+        <div *ngIf="firstname.invalid && (firstname.dirty || firstname.touched)" style="color: red;font-style: italic;
+        font-weight: bold;font-size: 12px;">
+            <div *ngIf="firstname.errors?.['required']">first name must not be empty</div>
+            <div *ngIf="firstname.errors?.['minlength']">First name must be minimum 3-character</div>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col">
+            <label for="lastname">LastName:</label>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col">
+            <input #lastname="ngModel" type="text" class="form-control" id="lastname" name="lastname"
+                [(ngModel)]="contact.lastname" required minlength="3" maxlength="10">
+        </div>
+
+        <div *ngIf="lastname.invalid && (lastname.dirty || lastname.touched)" style="color: red;font-style: italic;
+        font-weight: bold;font-size: 12px;">
+            <div *ngIf="lastname.errors?.['required']">last name must not be empty</div>
+            <div *ngIf="lastname.errors?.['minlength']">last name must be minimum 3-character</div>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col">
+            <label for="gender">Gender :</label>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col">
+            <input #gender="ngModel" type="text" class="form-control" id="gender" name="gender"
+                [(ngModel)]="contact.gender" required minlength="3" maxlength="10">
+        </div>
+
+        <div *ngIf="gender.invalid && (gender.dirty || gender.touched)" style="color: red;font-style: italic;
+        font-weight: bold;font-size: 12px;">
+            <div *ngIf="gender.errors?.['required']">gender must not be empty</div>
+            <div *ngIf="gender.errors?.['minlength']">gender  must be minimum 3-character</div>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col">
+            <label for="dob">Date Of Birth:</label>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col">
+            <input #dob="ngModel" type="text" class="form-control" id="dob" name="dob"
+                [(ngModel)]="contact.dob" required minlength="3" maxlength="10">
+        </div>
+
+        <div *ngIf="dob.invalid && (dob.dirty || firstname.touched)" style="color: red;font-style: italic;
+        font-weight: bold;font-size: 12px;">
+            <div *ngIf="dob.errors?.['required']">date of birth  must not be empty</div>
+            <div *ngIf="dob.errors?.['minlength']">date of birth name must be minimum 3-character</div>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col">
+            <label for="email">Email:</label>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col">
+            <input #email="ngModel" type="text" class="form-control" id="email" name="email"
+                [(ngModel)]="contact.email" required minlength="3" maxlength="10">
+        </div>
+
+        <div *ngIf="email.invalid && (email.dirty || email.touched)" style="color: red;font-style: italic;
+        font-weight: bold;font-size: 12px;">
+            <div *ngIf="email.errors?.['required']">email  must not be empty</div>
+            <div *ngIf="email.errors?.['minlength']">email  must be minimum 3-character</div>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col">
+            <label for="phone">Phone:</label>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col">
+            <input #phone="ngModel" type="text" class="form-control" id="phone" name="phone"
+                [(ngModel)]="contact.phone" required minlength="3" maxlength="10">
+        </div>
+
+        <div *ngIf="phone.invalid && (phone.dirty || phone.touched)" style="color: red;font-style: italic;
+        font-weight: bold;font-size: 12px;">
+            <div *ngIf="phone.errors?.['required']">phone no is mandidory</div>
+            <div *ngIf="phone.errors?.['minlength']">phone number must be 10 digits</div>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col">
+            <label for="city">City</label>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col">
+            <input #city="ngModel" type="text" class="form-control" id="city" name="city"
+                [(ngModel)]="contact.city" required minlength="3" maxlength="10">
+        </div>
+
+        <div *ngIf="city.invalid && (city.dirty || city.touched)" style="color: red;font-style: italic;
+        font-weight: bold;font-size: 12px;">
+            <div *ngIf="city.errors?.['required']">City name must not be empty</div>
+            <div *ngIf="city.errors?.['minlength']">City name must be minimum 3-character</div>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col">
+            <label for="state">State:</label>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col">
+            <input #state="ngModel" type="text" class="form-control" id="state" name="state"
+                [(ngModel)]="contact.state" required minlength="3" maxlength="10">
+        </div>
+
+        <div *ngIf="state.invalid && (state.dirty || state.touched)" style="color: red;font-style: italic;
+        font-weight: bold;font-size: 12px;">
+            <div *ngIf="state.errors?.['required']">State  name must not be empty</div>
+            <div *ngIf="state.errors?.['minlength']">state name must be minimum 3-character</div>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col">
+            <label for="country">Country:</label>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col">
+            <input #country="ngModel" type="text" class="form-control" id="firstname" name="firstname"
+                [(ngModel)]="contact.country" required minlength="3" maxlength="10">
+        </div>
+
+        <div *ngIf="country.invalid && (country.dirty || country.touched)" style="color: red;font-style: italic;
+        font-weight: bold;font-size: 12px;">
+            <div *ngIf="country.errors?.['required']">Country name must not be empty</div>
+            <div *ngIf="country.errors?.['minlength']">First name must be minimum 3-character</div>
+        </div>
+    </div>
+    
+   
+    <div class="row form-group">
+        <div class="col">
+            <label for="picture">Picture:</label>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col">
+            <input #picture="ngModel" type="text" class="form-control" id="picture" name="picture"
+                [(ngModel)]="contact.picture" required minlength="3" maxlength="10">
+        </div>
+
+        <div *ngIf="picture.invalid && (picture.dirty || picture.touched)" style="color: red;font-style: italic;
+        font-weight: bold;font-size: 12px;">
+            <div *ngIf="picture.errors?.['required']">Picture  name must not be empty</div>
+            <div *ngIf="picture.errors?.['minlength']">First name must be minimum 3-character</div>
+        </div>
+    </div>
+    
+    <button class="btn btn-primary" [disabled]="f1.invalid" (click)="addContact()">Save</button>
+</form>

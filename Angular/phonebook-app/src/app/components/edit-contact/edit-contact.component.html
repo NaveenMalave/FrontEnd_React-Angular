@@ -1,0 +1,141 @@
+<form *ngIf="editForm" class="form" (ngSubmit)="updateContact(editForm.value)" [formGroup]="editForm">
+    <div class="row form-group">
+        <div class="col">
+            <label for="id">ID:</label>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col">
+            <input type="text" class="form-control" formControlName="id" id="id" readonly >
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col">
+            <label for="firstname">firstname</label>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col">
+            <input type="text" class="form-control" id="firstname" formControlName="firstname" name="firstname">
+        </div>
+
+        <div *ngIf="editForm.controls['firstname'].invalid && (editForm.controls['firstname'].dirty || editForm.controls['firstname'].touched)"
+            style="color: red;font-style: italic;
+           font-weight: bold;font-size: 12px;">
+            <div *ngIf="editForm.controls['firstname'].errors?.['required']">first name must not be empty</div>
+            <div *ngIf="editForm.controls['firstname'].errors?.['minlength']">First name must be minimum 3-character
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row form-group">
+        <div class="col">
+            <label for="lastname">lastname</label>
+        </div>
+    </div>
+    <div class="row form-group">
+        <div class="col">
+            <input type="text" class="form-control" id="lastname" formControlName="lastname" name="lastname">
+        </div>
+        <div *ngIf="editForm.controls['lastname'].invalid && (editForm.controls['lastname'].dirty || editForm.controls['lastname'].touched)"
+            style="color: red;font-style: italic;
+           font-weight: bold;font-size: 12px;">
+            <div *ngIf="editForm.controls['lastname'].errors?.['required']">last name must not be empty</div>
+            <div *ngIf="editForm.controls['lastname'].errors?.['minlength']">last name must be minimum 3-character
+            </div>
+        </div>
+    </div>
+    
+        <div class="row form-group">
+            <div class="col">
+                <label for="gender">Gender :</label>
+            </div>
+        </div>
+        <div class="row form-group">
+            <div class="col">
+                <input type="text" class="form-control" id="gender" formControlName="gender" name="gender">
+            </div>
+            <div *ngIf="editForm.controls['gender'].invalid && (editForm.controls['gender'].dirty || editForm.controls['gender'].touched)"
+                style="color: red;font-style: italic;
+           font-weight: bold;font-size: 12px;">
+                <div *ngIf="editForm.controls['gender'].errors?.['required']">gender name must not be empty</div>
+                <div *ngIf="editForm.controls['gender'].errors?.['minlength']">gender name must be minimum 3-character
+                </div>
+            </div>
+        </div>
+            <div class="row form-group">
+                <div class="col">
+                    <label for="dob">Dob</label>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col">
+                    <input type="text" class="form-control" id="dob" formControlName="dob" name="dob">
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col">
+                    <label for="email">email:</label>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col">
+                    <input type="text" class="form-control" id="email" formControlName="email" name="email">
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col">
+                    <label for="phone">phone</label>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col">
+                    <input type="text" class="form-control" id="phone" formControlName="phone" name="phone">
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col">
+                    <label for="city">city</label>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col">
+                    <input type="text" class="form-control" id="city" formControlName="city" name="city">
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col">
+                    <label for="state">state</label>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col">
+                    <input type="text" class="form-control" id="state" formControlName="state" name="state">
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col">
+                    <label for="country">country</label>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col">
+                    <input type="text" class="form-control" id="country" formControlName="country" name="country">
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col">
+                    <label for="picture">picture</label>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col">
+                    <input type="text" class="form-control" id="picture" formControlName="picture" name="picture">
+                </div>
+            </div>
+        <input type="submit" [disabled]="editForm.invalid"  class="btn btn-{{editForm.valid?'primary': 'danger'}}"
+                value="submit">
+
+</form>

@@ -1,0 +1,22 @@
+<!-- <p>app-content works!</p> -->
+<div class="row">
+    <div class="col-md-4 alert alert-warning" style="height: 500px;">
+        <p>
+            <button routerLink="/contact-list" class="btn btn-primary btn-block" style="width: 100%;">Contact List</button>
+        </p>
+        <p>
+            <button routerLink="/home"class="btn btn-primary btn-block" style="width: 100%;">Home</button>
+        </p>
+        <p>
+            <button routerLink="/add-contact-details" class="btn btn-primary btn-block" style="width: 100%;">Add New Contact</button>
+        </p>
+    </div>
+    <div class="col-md-8">
+        <router-outlet></router-outlet>
+        <!-- <app-contact-details></app-contact-details> -->
+        
+         <!-- <app-add-contact-details></app-add-contact-details> -->
+         <!-- <contact-list></contact-list> -->
+          <!-- <edit-contact></edit-contact> -->
+    </div>
+</div>

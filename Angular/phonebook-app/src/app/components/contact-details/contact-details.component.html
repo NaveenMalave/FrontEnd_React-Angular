@@ -1,0 +1,103 @@
+<!-- <p>contact-details works!</p> -->
+<div *ngIf="contact">
+  <div class="row">
+    <div class="col">
+      <h5>Developed by Eshwar</h5>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <img src="./assets/images/{{contact.picture}}" width="300" height="400">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4">
+      Id
+    </div>
+    <div class="col-sm-8">
+      {{contact.id}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      FirstName
+    </div>
+    <div class="col-sm-8">
+      <a [routerLink]="['/edit-contact',contact.id]">
+      {{contact.firstname | uppercase}}</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      lastName
+    </div>
+    <div class="col-sm-8">
+      {{contact.lastname}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      Gender:
+    </div>
+    <div class="col-sm-8">
+      {{contact.gender}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      Date of Birth:
+    </div>
+    <div class="col-sm-8">
+      {{contact.dob}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      Email iD:
+    </div>
+    <div class="col-sm-8">
+      {{contact.email}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      Phone:
+    </div>
+    <div class="col-sm-8">
+      {{contact.phone}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      City:
+    </div>
+    <div class="col-sm-8">
+      {{contact.city}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      State:
+    </div>
+    <div class="col-sm-8">
+      {{contact.state}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      Country:
+    </div>
+    <div class="col-sm-8">
+      {{contact.country}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      Picture:
+    </div>
+    <div class="col-sm-8">
+      {{contact.picture}}
+    </div>
+  </div>
+</div>
