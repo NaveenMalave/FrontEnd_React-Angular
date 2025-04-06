@@ -1,0 +1,46 @@
+
+<div class="container">
+    <h2>New Loan Form</h2>
+    <form (ngSubmit)="onSumit()" *ngIf="customer">
+        <fieldset>
+            <legend>Personal Details:</legend>
+            <div class="form-group">
+                <label for="firstname">First Name :</label>
+                <input type="text" [(ngModel)]="customer.firstName" id="firstname" name="firstname" required>
+                <label for="lastname">Last Name </label>
+                <input type="text" [(ngModel)]="customer.lastName" id="lastname" name="lastname" required>
+            </div>
+            <div class="form-group">
+                <label for="date_of_Birth">Date of Birth(YYYY-MM-DD) </label>
+                <input type="text" [(ngModel)]="customer.date_of_Birth" id="date_of_Birth" name="date_of_Birth" required>
+                <label for="email">Email id</label>
+                <input type="text" [(ngModel)]="customer.email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" [(ngModel)]="customer.phone" id="phone" name="phone" required>
+                <label for="address">Address</label>
+                <input type="text" [(ngModel)]="customer.address" id="address" name="address" required>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Employment Details</legend>
+            <div class="form-group">
+                <label for="company_Name">Company Name</label>
+                <input type="text" [(ngModel)]="customer.company_Name" id="company_Name" name="company_Name" required>
+                <label for="salary">Salary</label>
+                <input type="text" [(ngModel)]="customer.salary" id="salary" name="salary" required>
+            </div>
+            <div class="form-group">
+                <label for="net_Income">Net Income</label>
+                <input type="text" [(ngModel)]="customer.net_Income" id="net_Income" name="net_Income" required>
+                <label for="last_salary_date">Last Salary Date(YYYY-MM-DD)</label>
+                <input type="text" [(ngModel)]="customer.last_salary_date" id="last_salary_date" name="last_salary_date" required>
+            </div>
+        </fieldset>
+        <div class="buttons">
+          <button type="submit" class="proceed">Proceed</button>
+          <button type="button" class="cancel" (click)="onCancel()">Cancel</button>
+        </div>
+    </form>
+</div>
