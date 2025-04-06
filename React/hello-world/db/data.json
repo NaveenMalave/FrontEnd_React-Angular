@@ -1,0 +1,32 @@
+{
+  "contacts": [
+    {
+      "id": "1",
+      "name": "kiran",
+      "email": "alexa@gmail.com",
+      "phone": "0903451239",
+      "picture": "images/10.jpg"
+    },
+    {
+      "id": "3",
+      "name": "rakesh",
+      "email": "alexa@gmail.com",
+      "phone": "0903451239",
+      "picture": "images/10.jpg"
+    },
+    {
+      "id": "2",
+      "name": "omkar",
+      "email": "alexa@gmail.com",
+      "phone": "0903451239",
+      "picture": "images/10.jpg"
+    },
+    {
+      "id": "8680",
+      "name": "naveen",
+      "email": "naveenmalave@gmail.com",
+      "phone": "89898989898",
+      "picture": "13.jpg"
+    }
+  ]
+}
